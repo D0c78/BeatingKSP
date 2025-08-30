@@ -21,8 +21,8 @@ class rocket:
 class env:
     def __init__(self,
                  ):
-        env.p: float = lambda h : isa.compute(h, variables=['p'])
-        env.rho: float = lambda h : isa.compute(h, variables=['rho'])
+        env.p = lambda h : isa.compute(h, variables=['p'])
+        env.rho = lambda h : isa.compute(h, variables=['rho'])
 
 # Define propagator
 class propagator:
