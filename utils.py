@@ -26,8 +26,19 @@ class env:
 
 # Define propagator
 class propagator:
-    def __init__(self, funcSim):
+    def __init__(self, funcSim, t0, tf, y0, method):
         propagator.dy = funcSim
+        propagator.t0 = t0
+        propagator.tf = tf
+        propagator.y0 = y0
+        propagator.method = method
+
+    def solve(self):
+        from scipy import integrate
+        t, y = integrate.solve_ivp(propagator.dy, (propagator.t0, propagator.tf), propagator.y0, propagator.method)
+
+# Define differential system
+def 
 
 
 
